@@ -56,6 +56,4 @@ async def analyze(request):
     
     
     
-if __name__ == "__main__":
-    if "serve" in sys.argv:
-        uvicorn.run(app, host="127.0.0.1", port=8000)
+uvicorn.run(app, host="https://flowersearcher.herokuapp.com", port=8000)
