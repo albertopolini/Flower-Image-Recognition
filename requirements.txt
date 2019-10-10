@@ -8,3 +8,4 @@ python-multipart==0.0.5
 async
 pathlib
 aiofiles
+aiohttp
