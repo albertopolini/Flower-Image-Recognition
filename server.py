@@ -58,4 +58,4 @@ async def analyze(request):
     
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-        uvicorn.run(app=app)
+        uvicorn.run(app=app, host='0.0.0.0')
