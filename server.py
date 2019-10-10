@@ -13,7 +13,7 @@ import async
 from pathlib import Path
 import aiohttp
 from io import BytesIO
-
+import os
 from labels import labels
 
 def load_model():
@@ -58,4 +58,5 @@ async def analyze(request):
     
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=5000)
+        port = int(os.environ.get('PORT', 5000))
+        uvicorn.run(app=app, host='0.0.0.0', port=port)
